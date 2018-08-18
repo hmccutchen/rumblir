@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+
+
+<h1>Welcome to your account!</h1>
+
+
+
+<% if session[:user] == nil %>
+<p>no one is logged in </p>
+<% elsif session[:user] != nil   %>
+<p>Welcome <%= session[:user].name %> </p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
