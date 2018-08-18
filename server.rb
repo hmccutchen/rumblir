@@ -7,7 +7,7 @@ set :database, 'sqlite3:rumblir.sqlite3'
 
 get'/home' do
 
-@users = User.all
+@posts = Post.all
 
 erb :home
 end
@@ -59,12 +59,23 @@ end
 end
 
 
-get '/posts' do
 
+get '/post' do
+
+erb :post
 end
 
 
+post '/post' do
 
+post = Post.create( title: params[:title],
+                    content: params[:content],
+                    image: params[:image]
+  )
+
+redirect :home
+
+end
 
 
 
