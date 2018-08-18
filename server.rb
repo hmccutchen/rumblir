@@ -9,6 +9,7 @@ get'/home' do
 
 @posts = Post.all
 
+
 erb :home
 end
 
@@ -66,6 +67,16 @@ erb :post
 end
 
 
+
+get '/post/:id' do
+
+@post = Post.find(params[:id])
+
+erb :show
+end
+
+
+
 post '/post' do
 
 post = Post.create( title: params[:title],
@@ -73,6 +84,13 @@ post = Post.create( title: params[:title],
                     image: params[:image]
   )
 
+redirect :home
+end
+
+get '/logout' do
+
+session[:user] = nil
+p "logged out"
 redirect :home
 
 end

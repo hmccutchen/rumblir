@@ -1,8 +1,16 @@
 
 
-<h1> Hello there</h1>
 
+
+
+
+
+<h1> Hello there</h1>
+<% if session[:user] == nil %>
+<h3> Must be logged in!</h3>
+<% else %>
 <% @posts.each do |post| %>
-<h2><%= post.title %></h2>
+<h2><a href="/post/<%=post.id%>"><%= post.title %></a></h2>
 <p><%= post.content %></p>
-  <% end %>
+<% end %>
+<% end %>
