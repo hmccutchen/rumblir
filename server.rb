@@ -59,6 +59,9 @@ end
 end
 
 
+get '/posts' do
+
+end
 
 
 
