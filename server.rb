@@ -7,6 +7,7 @@ set :database, 'sqlite3:rumblir.sqlite3'
 
 get'/home' do
 
+
 @posts = Post.all
 
 
@@ -85,14 +86,21 @@ get '/post' do
 erb :post
 end
 
+# def current_user
+# @user = User.find(params)
+# end
 
 
 post '/post' do
 
-post = Post.create( title: params[:title],
+ p current_user = session[:user]
+
+current_user.posts = Post.create( title: params[:title],
                     content: params[:content],
                     image: params[:image]
   )
+
+
 
 redirect :home
 end
