@@ -12,5 +12,6 @@
 <% @posts.each do |post| %>
 <h2><a href="/post/<%=post.id%>"><%= post.title %></a></h2>
 <p><%= post.content %></p>
+<%=post.user_id  %>
 <% end %>
 <% end %>

@@ -95,7 +95,7 @@ post '/post' do
 
  p current_user = session[:user]
 
-current_user.posts = Post.create( title: params[:title],
+@post = current_user.posts.create( title: params[:title],
                     content: params[:content],
                     image: params[:image]
   )

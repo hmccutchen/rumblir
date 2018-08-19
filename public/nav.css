@@ -4,10 +4,13 @@
   background-color: #f7f8ff;
   width: 100%;
   padding: 10px;
+  position: fixed;
 }
 .nav ul{
 display: flex;
 list-style: none;
+
+
 }
 
 .nav li{
