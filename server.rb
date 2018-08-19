@@ -61,7 +61,9 @@ end
 
 
 
-get '/post' do
+get 'user/:id/post' do
+
+@user
 
 erb :post
 end
@@ -74,6 +76,15 @@ get '/post/:id' do
 
 erb :show
 end
+
+
+# get '/user/:id/post'
+
+# @user = User.find_by_id(params[:id])
+# @post = Post.
+
+
+# end
 
 
 
