@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+
+
+
+<ul>
+  <li><a href="/home">Home</a></li>
+     <% if session[:user] == nil %>
+  <li><a href="/signup">Sign up</a></li>
+  <li><a href="/login">Log in</a></li>
+   <% else %>
+   <li><a href="/account"><%= session[:user].name%></a></li>
+   <li><a href="/logout">Log out</a></li>
+   <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<%= yield %>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

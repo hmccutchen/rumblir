@@ -7,7 +7,8 @@ set :database, 'sqlite3:rumblir.sqlite3'
 
 get'/home' do
 
-@users = User.all
+@posts = Post.all
+
 
 erb :home
 end
@@ -60,8 +61,50 @@ end
 
 
 
+get 'user/:id/post' do
+
+@user
+
+erb :post
+end
 
 
+
+get '/post/:id' do
+
+@post = Post.find(params[:id])
+
+erb :show
+end
+
+
+# get '/user/:id/post'
+
+# @user = User.find_by_id(params[:id])
+# @post = Post.
+
+
+# end
+
+
+
+post '/post' do
+
+post = Post.create( title: params[:title],
+                    content: params[:content],
+                    image: params[:image]
+  )
+
+redirect :home
+end
+
+get '/logout' do
+
+session[:user] = nil
+p "logged out"
+redirect :home
+
+end
 
 
 
