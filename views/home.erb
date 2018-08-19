@@ -4,13 +4,14 @@
 
 
 
-
+<div class="container title">
 <h1> Hello there</h1>
 <% if session[:user] == nil %>
 <h3> Must be logged in!</h3>
 <% else %>
+</div>
 <% @posts.each do |post| %>
-<h2><a href="/post/<%=post.id%>"><%= post.title %></a></h2>
+<h3><a href="/post/<%=post.id%>"><%= post.title %></a></h3>
 <p><%= post.content %></p>
 <%=post.user_id  %>
 <% end %>

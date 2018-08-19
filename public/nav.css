@@ -5,6 +5,8 @@
   width: 100%;
   padding: 10px;
   position: fixed;
+  z-index: 0;
+  opacity: 0.6;
 }
 .nav ul{
 display: flex;
