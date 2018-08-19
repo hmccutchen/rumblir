@@ -34,6 +34,7 @@ end
 
 get '/account' do
 
+
 erb :account
 end
 
@@ -61,12 +62,12 @@ end
 
 
 
-get 'user/:id/post' do
+# get 'user/:id/post' do
 
-@user
+# @user
 
-erb :post
-end
+# erb :post
+# end
 
 
 
@@ -78,13 +79,11 @@ erb :show
 end
 
 
-# get '/user/:id/post'
-
-# @user = User.find_by_id(params[:id])
-# @post = Post.
+get '/post' do
 
 
-# end
+erb :post
+end
 
 
 
@@ -97,6 +96,8 @@ post = Post.create( title: params[:title],
 
 redirect :home
 end
+
+
 
 get '/logout' do
 
