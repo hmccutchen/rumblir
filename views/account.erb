@@ -7,14 +7,12 @@
 
 
 
-<h1>Welcome to your account!</h1>
+<h2 class="account-name"> <%= session[:user].name %></h2>
 
 
 
 <% if session[:user] == nil %>
 <p>no one is logged in </p>
-<% elsif session[:user] != nil   %>
-<p>Welcome <%= session[:user].name %> </p>
 <% end %>
 
 

@@ -5,3 +5,20 @@
   padding-top: 7%;
   text-align: center;
 }
+
+
+.log-error{
+
+  color: red;
+  text-align:center;
+}
+
+
+.account-name{
+  color: #030623;
+
+}
+
+.content{
+  text-align: center;
+}

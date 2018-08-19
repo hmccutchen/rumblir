@@ -11,18 +11,18 @@
 
 
 
-<div class="nav">
-<ul>
-  <li><a href="/home">Home</a></li>
-     <% if session[:user] == nil %>
-  <li><a href="/signup">Sign up</a></li>
-  <li><a href="/login">Log in</a></li>
-   <% else %>
-   <li><a href="/account"><%= session[:user].name%></a></li>
-   <li><a href="/logout">Log out</a></li>
-   <% end %>
-</ul>
-</div>
+    <div class="nav">
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <% if session[:user] == nil %>
+        <li><a href="/signup">Sign up</a></li>
+        <li><a href="/login">Log in</a></li>
+        <% else %>
+        <li><a href="/account"><%= session[:user].name%></a></li>
+        <li><a href="/logout">Log out</a></li>
+        <% end %>
+      </ul>
+    </div>
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-<%= yield %>
+  <%= yield %>
 
 
 
@@ -43,6 +43,6 @@
 
 
 
-
+  <script src="main.js"></script>
 </body>
 </html>
