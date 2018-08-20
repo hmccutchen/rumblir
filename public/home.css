@@ -1,5 +1,13 @@
 
+/*#homepage{
 
+  background-image: url("white.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed
+  filter:blur(50px);
+}*/
 
 .title{
   padding-top: 7%;
@@ -21,7 +29,7 @@
 
 .content{
   text-align: center;
-/* border: solid 2px black;*/
+  /* border: solid 2px black;*/
 }
 
 div.container.content{
@@ -35,12 +43,12 @@ div.container.content{
 
 div.container.content:hover{
 
-width: 51vw;
+  width: 51vw;
 
 }
 a.post-title {
-color: #0e1521;
-font-size: 1.4em;
+  color: #0e1521;
+  font-size: 1.4em;
 
 }
 
@@ -50,28 +58,37 @@ a.post-title:hover{
 }
 
 .image-post{
-height: 50%;
-width: 99%;
+  height: 50%;
+  width: 99%;
 }
 
 input.btn-primary{
-/*  width:32%;*/
+  /*  width:32%;*/
   background-color:#18376b;
   border-color: #18376b;
 }
 
 a.login{
 
-color: red;
-text-decoration: underline;
+  color: red;
+  text-decoration: underline;
 
 }
 
 input.signup-form{
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   margin-bottom: 3px;
+  /* border-bottom-color:grey;*/
 }
 
 input.signup-form::placeholder{
   font-size: 24px;
+}
+
+#homegif{
+  margin-top: 10px;
+}
+
+.hide{
+  display: none;
 }

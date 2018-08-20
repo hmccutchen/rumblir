@@ -2,15 +2,19 @@
 
 
 
-
+<body id="homepage">
 
 <div class="container title">
   <% if session[:user] == nil %>
-  <h3 class="log-error"> Must be <a class="login" href="/login">logged</a> in!</h3>
+  <h3 class="log-error"> <a class="login" href="/login">Log In</a></h3>
   <p>or</p>
   <h3>Sign up</h3>
    <%= erb :signup %>
-  <% else %>
+   <div>
+   <img class="hide" id="homegif" src="http://bestanimations.com/Animals/Mammals/Cats/cats/cute-kitty-animated-gif-26.gif" alt="">
+
+</div>
+   <% else %>
   <h1> What's new</h1>
 </div>
 <div class="container">
@@ -31,3 +35,4 @@
         <% end %>
         <% end %>
 </div>
+</body>
