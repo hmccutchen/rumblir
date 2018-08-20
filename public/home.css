@@ -21,4 +21,35 @@
 
 .content{
   text-align: center;
+/* border: solid 2px black;*/
+}
+
+div.container.content{
+  border: solid 1px #0e1521;
+  padding: 10px;
+  margin-bottom: 20%;
+  width: 50vw;
+  height:auto;
+  transition: width,.3s;
+}
+
+div.container.content:hover{
+
+width: 52vw;
+
+}
+a.post-title {
+color: #0e1521;
+font-size: 1.4em;
+
+}
+
+a.post-title:hover{
+  text-decoration: none;
+
+}
+
+.image-post{
+height: 50%;
+width: 99%;
 }

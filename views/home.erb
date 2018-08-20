@@ -11,16 +11,20 @@
   <% else %>
 </div>
 <div class="container">
-  <% @posts.reverse.each do |post|  %>
+
+  <% @posts.reverse.each do |post|%>
+
   <div class="row">
     <div class="col-md-12 col-sm-12">
-      <div class="content">
-        <h3><a href="/post/<%=post.id%>"><%= post.title %></a></h3>
+      <div class="container content">
+        <img class="image-post" src="<%= post.image %>" alt="">
+        <p><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
         <p><%= post.content %></p>
         <%=post.user_id  %>
-        <% end %>
-        <% end %>
+
       </div>
     </div>
   </div>
+        <% end %>
+        <% end %>
 </div>
