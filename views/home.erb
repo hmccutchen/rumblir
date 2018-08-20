@@ -5,10 +5,13 @@
 
 
 <div class="container title">
-  <h1> What's new</h1>
   <% if session[:user] == nil %>
-  <h3 class="log-error"> Must be <a href="/login">logged</a> in!</h3>
+  <h3 class="log-error"> Must be <a class="login" href="/login">logged</a> in!</h3>
+  <p>or</p>
+  <h3>Sign up</h3>
+   <%= erb :signup %>
   <% else %>
+  <h1> What's new</h1>
 </div>
 <div class="container">
 
@@ -20,7 +23,7 @@
         <img class="image-post" src="<%= post.image %>" alt="">
         <p><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
         <p><%= post.content %></p>
-        <%=post.user_id  %>
+        <p><%=post.created_at.strftime("%y/%m/%d")%></p>
 
       </div>
     </div>

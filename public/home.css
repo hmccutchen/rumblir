@@ -35,7 +35,7 @@ div.container.content{
 
 div.container.content:hover{
 
-width: 52vw;
+width: 51vw;
 
 }
 a.post-title {
@@ -52,4 +52,26 @@ a.post-title:hover{
 .image-post{
 height: 50%;
 width: 99%;
+}
+
+input.btn-primary{
+/*  width:32%;*/
+  background-color:#18376b;
+  border-color: #18376b;
+}
+
+a.login{
+
+color: red;
+text-decoration: underline;
+
+}
+
+input.signup-form{
+  padding-bottom: 15px;
+  margin-bottom: 3px;
+}
+
+input.signup-form::placeholder{
+  font-size: 24px;
 }

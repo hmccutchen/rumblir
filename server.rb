@@ -36,6 +36,7 @@ end
 get '/account' do
 
 
+
 erb :account
 end
 
@@ -63,14 +64,6 @@ end
 
 
 
-# get 'user/:id/post' do
-
-# @user
-
-# erb :post
-# end
-
-
 
 get '/post/:id' do
 
@@ -86,9 +79,7 @@ get '/post' do
 erb :post
 end
 
-# def current_user
-# @user = User.find(params)
-# end
+
 
 
 post '/post' do
@@ -115,6 +106,15 @@ redirect :home
 
 end
 
+
+get '/delete' do
+
+user = User.find(session[:user].id).destroy
+
+session[:user] = nil
+
+redirect :signup
+end
 
 
 require './models'

@@ -9,7 +9,7 @@
 
 <h2 class="account-name"> <%= session[:user].name %></h2>
 
-
+<a class="btn btn-danger" href="/delete">Delete account</a>
 
 <% if session[:user] == nil %>
 <p>no one is logged in </p>
