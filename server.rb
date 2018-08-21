@@ -23,7 +23,6 @@ end
 
 
 post '/signup' do
-p params
 
 user = User.create( name: params[:name],
                     email: params[:email],
@@ -34,6 +33,8 @@ redirect :account
 end
 
 get '/account' do
+
+
 
 
 
@@ -54,6 +55,7 @@ given_password = params[:password]
 
 user = User.find_by(email: email)
 if user.password == given_password
+
   session[:user] = user
 redirect :account
 else
@@ -67,7 +69,8 @@ end
 
 get '/post/:id' do
 
-@post = Post.find(params[:id])
+ @post = Post.find(params[:id])
+
 
 erb :show
 end
@@ -84,9 +87,9 @@ end
 
 post '/post' do
 
- p current_user = session[:user]
+  @current_user = session[:user]
 
-@post = current_user.posts.create( title: params[:title],
+@post = @current_user.posts.create( title: params[:title],
                     content: params[:content],
                     image: params[:image]
   )
@@ -115,6 +118,7 @@ session[:user] = nil
 
 redirect :signup
 end
+
 
 
 require './models'

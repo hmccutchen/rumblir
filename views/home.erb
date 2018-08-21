@@ -27,6 +27,7 @@
         <img class="image-post" src="<%= post.image %>" alt="">
         <p><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
         <p><%= post.content %></p>
+             <%= post.user.try(:name) %>
         <p><%=post.created_at.strftime("%y/%m/%d")%></p>
 
       </div>
