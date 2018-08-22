@@ -1,4 +1,5 @@
 source 'https://rubygems.org' do
+
   gem 'rake'
   gem 'sinatra-activerecord'
   gem 'activerecord'
@@ -17,5 +18,3 @@ source 'https://rubygems.org' do
     gem 'pg'
 
   end
-
-end

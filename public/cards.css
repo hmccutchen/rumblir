@@ -1,0 +1,22 @@
+
+img.image-post{
+  z-index: 2;
+filter: drop-shadow(2px 3px 5px );
+margin-top: -56px;
+border-radius: 5px;
+}
+
+
+p#title-text{
+  margin-top: 22px;
+}
+
+
+p.card-content{
+
+}
+
+div.card{
+  background-color: #fbf6f6;
+box-shadow: -1px 0px 5px;
+}
