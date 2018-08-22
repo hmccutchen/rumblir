@@ -2,7 +2,7 @@ h2.account-name{
   text-align: center;
   font-size: 65px;
   color: #ddd;
- text-shadow: -1px -1px 0px #c9c0c0;
+ text-shadow: -1px -2px 0px #c9c0c0;
 }
 
 .account-body{
@@ -69,6 +69,14 @@ top: 123px;
 right: 348px;
 z-index: 1;
 }
+
+input.btn.btn-success{
+  box-shadow: 0px 4px 1px #25650e;
+}
+
+a#fake-button.btn.btn-danger{
+  box-shadow: 0px 3px 1px #ab2020;
+}
 .danger{
   margin-left: 101px;
 
@@ -78,4 +86,23 @@ padding: 25px;
 .close{
 font-size: 31px;
 font-weight: bold;
+}
+
+img.image-posts{
+  height: auto;
+  width: 100%;
+ /* padding-top: 10px;*/
+  border: solid 1px #ab2020;
+}
+
+.account-posts{
+  padding-top: 10% ;
+  text-align: center;
+text-shadow: 1px 1px 2px #0e4c93;
+padding-bottom: 5%;
+
+}
+
+.profile-content{
+
 }

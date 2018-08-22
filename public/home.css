@@ -1,31 +1,25 @@
 
-/*#homepage{*/
 
- /* background-image: url("https://cdn.dribbble.com/users/343382/screenshots/1577559/untitled-1.gif");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed
-}*/
+  #homepage{
+    /*  background-color: #fbfbfb;*/
+    background-image: url("https://designshack.net/wp-content/uploads/best-poly-backgrounds.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    background-attachment: fixed;
+  }
 
-#homepage{
-/*  background-color: #fbfbfb;*/
-background-image: url("https://designshack.net/wp-content/uploads/best-poly-backgrounds.png");
-background-repeat: no-repeat;
-background-size: cover;
-opacity: 0.7;
-background-attachment: fixed;
-}
+  #homepage1{
+   background-image: url('https://png2.kisspng.com/20180216/obw/kisspng-perspective-icon-polka-dot-technology-background-5a86de5f32a906.4701936215187881912075.png');
 
-#homepage1{
- background-image: url('https://cdn.dribbble.com/users/343382/screenshots/2457739/20-low-poly-polygonal-geometrical-triangular-textures-backgrounds.gif');
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
-/*filter: blur(1px);*/
-z-index: 0;
-}
-h1#new-title{
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+
+
+   z-index: 0;
+ }
+ h1#new-title{
   padding-bottom: 50px;
 }
 .title{
@@ -52,8 +46,8 @@ h1#new-title{
 }
 
 h1#new-title {
-text-align: center;
-
+  text-align: center;
+padding-bottom: 15%;
 
 }
 
@@ -71,17 +65,17 @@ div.container.content{
 div.container.title{
   margin-top: 49px;
 
-background-color: white;
+  background-color: white;
 
-opacity: 5;
+  opacity: 5;
 
-border-radius: 6px;
+  border-radius: 6px;
 
-height: 431px;
+  height: 431px;
 
-width: 50%;
+  width: 50%;
 
-filter: drop-shadow(1px 5px 9px);
+  filter: drop-shadow(1px 5px 9px);
 }
 
 div.container.content:hover{
@@ -136,4 +130,21 @@ input.signup-form::placeholder{
 
 .hide{
   display: none;
+}
+
+.image-link{
+ color: black;
+}
+
+.image-link:hover{
+  color: #cc1d2e;
+}
+
+.name-link{
+  color: black;
+  font-size: 20px;
+}
+.name-link:hover{
+  text-decoration: none;
+  color: #2e5696;
 }

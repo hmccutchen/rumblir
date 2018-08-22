@@ -14,8 +14,8 @@
    <img class="hide" id="homegif" src="http://bestanimations.com/Animals/Mammals/Cats/cats/cute-kitty-animated-gif-26.gif" alt="">
 </div> -->
    <% else %>
-
-  <h1 id="new-title"> What's new</h1>
+<body id="homepage1">
+  <h1 id="new-title"> </h1>
 </div>
 <div class="container">
 
@@ -25,11 +25,11 @@
     <div class="col-md-12 col-sm-12">
 
       <div class="container content">
-        <img class="image-post" src="<%= post.image %>" alt="">
+        <a class="image-link" href="/post/<%=post.id%>"><img class="image-post" src="<%= post.image %>" alt=""></a>
         <p id="title-text"><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
         <div class="container card">
         <p class="card-content"><%= post.content %></p>
-          <a href="/user/<%=post.user.try(:id)  %>"><%= post.user.try(:name) %></a>
+          <a class="name-link" href="/user/<%=post.user.try(:id)  %>"><%= post.user.try(:name) %></a>
         <p><%=post.created_at.strftime("%y/%m/%d")%></p>
 
        </div>

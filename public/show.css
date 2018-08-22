@@ -3,4 +3,14 @@
 .show-pic{
   height:auto;
   width: 70%;
+  border-radius: 4%;
+  border: solid 1px black;
+  margin-left: 164px;
+}
+
+
+h1.show-page-title{
+  text-align: center;
+  padding-bottom: 8%;
+  padding-top: 2%;
 }
