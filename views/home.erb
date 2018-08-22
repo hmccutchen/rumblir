@@ -3,14 +3,64 @@
 
 
 
+  <% if session[:user] == nil %>
+<body id="homepage">
+<div class="container title">
+  <h3 class="log-error"> <a class="login" href="/login">Log In</a></h3>
+  <p>or</p>
+  <h3>Sign up</h3>
+   <%= erb :signup %>
+   <!-- <div>
+   <img class="hide" id="homegif" src="http://bestanimations.com/Animals/Mammals/Cats/cats/cute-kitty-animated-gif-26.gif" alt="">
+</div> -->
+   <% else %>
+<body id="homepage1">
+  <h1 id="new-title"> </h1>
+</div>
+<div class="container">
+
+  <% @posts.last(20).reverse.each do |post|%>
+
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+
+      <div class="container content">
+        <a class="image-link" href="/post/<%=post.id%>"><img class="image-post" src="<%= post.image %>" alt=""></a>
+        <p id="title-text"><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
+        <div class="container card">
+        <p class="card-content"><%= post.content %></p>
+          <a class="name-link" href="/user/<%=post.user.try(:id)  %>"><%= post.user.try(:name) %></a>
+        <p><%=post.created_at.strftime("%y/%m/%d")%></p>
+
+       </div>
+      </div>
+    </div>
+  </div>
+
+        <% end %>
+        <% end %>
+</div>
 
 
-<h1> Hello there</h1>
-<% if session[:user] == nil %>
-<h3> Must be logged in!</h3>
-<% else %>
-<% @posts.each do |post| %>
-<h2><a href="/post/<%=post.id%>"><%= post.title %></a></h2>
-<p><%= post.content %></p>
-<% end %>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

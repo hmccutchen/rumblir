@@ -24,7 +24,6 @@ end
 
 
 post '/signup' do
-p params
 
 user = User.create( name: params[:name],
                     email: params[:email],
@@ -35,6 +34,8 @@ redirect :account
 end
 
 get '/account' do
+
+@user_post = session[:user].posts
 
 
 erb :account
@@ -54,6 +55,7 @@ given_password = params[:password]
 
 user = User.find_by(email: email)
 if user.password == given_password
+
   session[:user] = user
 redirect :account
 else
@@ -64,21 +66,23 @@ end
 
 
 
-# get 'user/:id/post' do
-
-# @user
-
-# erb :post
-# end
-
-
 
 get '/post/:id' do
 
-@post = Post.find(params[:id])
+  @apost = Post.find(params[:id])
 
 erb :show
 end
+
+
+get '/user/:id' do
+
+  post = Post.where(user_id: params[:id] )
+  user_post = post.select( :user_id, :content, :title, :image)
+  @user_posts = user_post.all
+
+erb :user
+  end
 
 
 get '/post' do
@@ -87,23 +91,24 @@ get '/post' do
 erb :post
 end
 
-# def current_user
-# @user = User.find(params)
-# end
+
+
+
 
 
 post '/post' do
 
- p current_user = session[:user]
+  @current_user = session[:user]
 
-current_user.posts = Post.create( title: params[:title],
+@post = @current_user.posts.create( title: params[:title],
                     content: params[:content],
                     image: params[:image]
   )
 
 
 
-redirect :home
+redirect :account
+
 end
 
 
@@ -115,6 +120,18 @@ p "logged out"
 redirect :home
 
 end
+
+
+get '/delete' do
+
+user = User.find(session[:user].id).destroy
+
+session[:user] = nil
+
+redirect :home
+end
+
+
 
 
 

@@ -1,17 +1,24 @@
 
 .nav{
   justify-content: flex-end;
-  background-color: #f7f8ff;
+  background-color: #fbfbfb ;
   width: 100%;
   padding: 10px;
+  position: sticky;
+ top: 0px;
+  /*opacity: 1;*/
+  z-index:1;
+  filter: drop-shadow(1px -4px 6px #1e1e21);
 }
 .nav ul{
 display: flex;
 list-style: none;
+
+
 }
 
 .nav li{
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 1.3em;
 }
 .nav a{
@@ -19,4 +26,12 @@ list-style: none;
 }
 .nav a:hover{
   text-decoration: none;
+}
+
+i.fab.fa-rendact{
+position: absolute;
+color: #cc1d2e;;
+bottom: 30px;
+
+left: 1%;
 }

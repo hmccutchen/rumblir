@@ -3,7 +3,18 @@
 
 
 
+<div class="container show-page">
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <h1 class="show-page-title"> <%= @apost.title %></h1>
 
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+      <img class="show-pic" src="<%= @apost.image %>" alt="">
+      <div class="container">
+      <h5><%= @apost.content %></h5>
+
+</div>
+    </div>
+  </div>
+</div>
+
 

@@ -4,23 +4,28 @@
 <head>
   <title></title>
 </head>
-<body>
+<body class="login-body">
 
 
-<h1>Have an account Login!</h1>
+  <div class="container login">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="login-form">
+          <h1> Login</h1>
 
+          <form action="/login" method="post">
 
-<form action="/login" method="post">
+            <input class="signup-form" type="email" placeholder="E-mail" name="email"><br>
+            <input class="signup-form" type="password" placeholder="Passwrord" name="password"><br>
+            <input class="btn btn-primary signbtn" type="submit" value="Log-in">
 
-  <input type="email" placeholder="E-mail" name="email"><br>
-  <input type="password" placeholder="Passwrord" name="password"><br>
-  <input type="submit" value="Log-in">
+          </form>
+        </div>
 
-</form>
+      </div>
+    </div>
 
-
-
-
+  </div>
 
 
 

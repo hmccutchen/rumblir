@@ -3,31 +3,63 @@
 <head>
   <title></title>
 </head>
-<body>
+<body class="account-body">
 
 
 
-<h1>Welcome to your account!</h1>
+  <h2 class="account-name"> <%= session[:user].name.capitalize %></h2>
 
 
 
-<% if session[:user] == nil %>
-<p>no one is logged in </p>
-<% elsif session[:user] != nil   %>
-<p>Welcome <%= session[:user].name %> </p>
-<% end %>
-
-
-<h1> whats on your mind</h1>
-
-<%= erb :post %>
+  <div class="container">
+    <% if session[:user] == nil %>
+    <p>no one is logged in </p>
+    <% end %>
 
 
 
 
+    <%= erb :post %>
+
+  </div>
 
 
 
+  <div class="container faux-danger">
+
+    <a id="fake-button" class="btn btn-danger" href="#">Cancel</a>
+
+  </div>
+
+
+
+
+
+  <div id="modal" class="container real-danger">
+
+   <span id="exit" class="close">&times</span>
+   <div class="container danger">
+    <a id="real-button" class="btn btn-danger" href="/delete">Delete account</a>
+  </div>
+</div>
+
+
+
+<h1 class="account-posts">My Posts</h1>
+<div class="container">
+  <div class="row">
+      <% @user_post.each do |post| %>
+    <div class="col-md-4 col-sm-6">
+      <img class="image-posts" src="<%= post.image %>" alt="">
+      <div class="container">
+      <h3><%= post.title %></h3>
+      <h6><%= post.content %></h6>
+
+    </div>
+    </div>
+      <% end %>
+  </div>
+</div>
 
 
 
