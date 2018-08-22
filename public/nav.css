@@ -27,3 +27,11 @@ list-style: none;
 .nav a:hover{
   text-decoration: none;
 }
+
+i.fab.fa-rendact{
+position: absolute;
+
+bottom: 40px;
+
+left: 1%;
+}
