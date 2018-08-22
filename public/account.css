@@ -1,0 +1,81 @@
+h2.account-name{
+  text-align: center;
+  font-size: 65px;
+  color: #ddd;
+ text-shadow: -1px -1px 0px #c9c0c0;
+}
+
+.account-body{
+  background-color: #f0f0f0;
+
+}
+
+
+.account-form{
+  margin-left: 35%;
+}
+
+.account-form input{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.account-form input[type=text]{
+width:52.5%;
+  font-size: 15px;
+}
+
+input.btn.btn-success{
+  width: 52.5%;
+}
+
+.account-form input[type=url]{
+  width:52.5%;
+}
+
+#real-button{
+  border: solid 1px black;
+
+
+
+}
+
+
+.real-danger{
+  margin-top: 20px;
+  background-color: #ed8e90;
+
+height: 102px;
+
+
+opacity: 0.9;
+
+border-radius: 9px;
+
+}
+
+div.container.danger{
+width: 44%;
+margin-top: 48px;
+
+}
+div.container.real-danger{
+  display: none;
+width: 38%;
+height: 26vh;
+position: fixed;
+top: 123px;
+
+right: 348px;
+z-index: 1;
+}
+.danger{
+  margin-left: 101px;
+
+padding: 25px;
+}
+
+.close{
+font-size: 31px;
+font-weight: bold;
+}

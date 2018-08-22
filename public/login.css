@@ -3,4 +3,37 @@
 .login-form{
   text-align: center;
   padding-top: 30px;
+
+
+}
+
+
+.login-body{
+  background-image: url("https://banner2.kisspng.com/20180125/kgw/kisspng-low-poly-polygon-texture-wallpaper-blues-abstract-background-big-lingge-5a6a8b527271a7.4200864115169319224688.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  background-attachment: fixed;
+
+}
+
+div.container.login{
+  width: 50%;
+}
+
+.login{
+  margin-top: 49px;
+
+background-color: white;
+
+opacity: 5;
+
+border-radius: 6px;
+
+height: 431px;
+
+width: 50%;
+
+filter: drop-shadow(1px 5px 9px);
+z-index: 1 ;
 }

@@ -3,28 +3,53 @@
 <head>
   <title></title>
 </head>
-<body>
+<body class="account-body">
 
 
 
-<h2 class="account-name"> <%= session[:user].name %></h2>
+<h2 class="account-name"> <%= session[:user].name.capitalize %></h2>
 
-<a class="btn btn-danger" href="/delete">Delete account</a>
 
+
+<div class="container">
 <% if session[:user] == nil %>
 <p>no one is logged in </p>
 <% end %>
 
 
-<h1> whats on your mind</h1>
+
 
 <%= erb :post %>
 
+</div>
+
+
+
+<div class="container faux-danger">
+
+<a id="fake-button" class="btn btn-danger" href="#">Cancel</a>
+
+</div>
 
 
 
 
 
+<div id="modal" class="container real-danger">
+
+ <span id="exit" class="close">&times</span>
+<div class="container danger">
+<a id="real-button" class="btn btn-danger" href="/delete">Delete account</a>
+</div>
+</div>
+
+
+<div class="container">
+
+  <h2>this will be where users can see their posts</h2>
+
+
+</div>
 
 
 

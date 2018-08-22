@@ -3,10 +3,11 @@
 @import 'show.css';
 @import 'login.css';
 @import 'cards.css';
-
+@import 'account.css';
 
 html{
 font-family: 'Roboto', sans-serif;
+
 
 }
 

@@ -5,9 +5,12 @@
 
 <div class="container">
 
-<h2><%= @post.title %></h2>
-<p><%= @post.content %></p>
-<img class="show-pic" src="<%= @post.image %>" alt="">
+
+
+    <p> <%= @apost.title %></p>
+    <p><%= @apost.content %></p>
+    <%= @apost.user_id %>
+<img class="show-pic" src="<%= @apost.image %>" alt="">
 
 
 

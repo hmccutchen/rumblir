@@ -1,7 +1,7 @@
 
 .nav{
   justify-content: flex-end;
-  background-color: #f7f8ff;
+  background-color: #fbfbfb ;
   width: 100%;
   padding: 10px;
   position: sticky;
@@ -18,7 +18,7 @@ list-style: none;
 }
 
 .nav li{
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 1.3em;
 }
 .nav a{

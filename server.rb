@@ -34,9 +34,11 @@ end
 
 get '/account' do
 
+p session[:user]
 
+# @this_user = User.find_by(session[:user])
 
-
+# p @this_user
 
 erb :account
 end
@@ -69,11 +71,20 @@ end
 
 get '/post/:id' do
 
- @post = Post.find(params[:id])
-
+  @apost = Post.find(params[:id])
 
 erb :show
 end
+
+
+get '/user/:id' do
+
+  post = Post.where(user_id: params[:id] )
+  user_post = post.select( :user_id, :content, :title, :image)
+  @user_posts = user_post.all
+
+erb :user
+  end
 
 
 get '/post' do
@@ -81,6 +92,8 @@ get '/post' do
 
 erb :post
 end
+
+
 
 
 
@@ -116,8 +129,10 @@ user = User.find(session[:user].id).destroy
 
 session[:user] = nil
 
-redirect :signup
+redirect :home
 end
+
+
 
 
 
