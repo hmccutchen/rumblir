@@ -34,11 +34,8 @@ end
 
 get '/account' do
 
-p session[:user]
+@user_post = session[:user].posts
 
-# @this_user = User.find_by(session[:user])
-
-# p @this_user
 
 erb :account
 end
@@ -109,7 +106,8 @@ post '/post' do
 
 
 
-redirect :home
+redirect :account
+
 end
 
 

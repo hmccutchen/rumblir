@@ -47,8 +47,11 @@
 <div class="container">
 
   <h2>this will be where users can see their posts</h2>
-
-
+<% @user_post.each do |post| %>
+<%= post.title %>
+<%= post.content %>
+  <img src="<%= post.image %>" alt="">
+<% end %>
 </div>
 
 
