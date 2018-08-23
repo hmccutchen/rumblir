@@ -29,7 +29,7 @@
         <p id="title-text"><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
         <div class="container card">
         <p class="card-content"><%= post.content %></p>
-          <a class="name-link" href="/user/<%=post.user.try(:id)  %>"><%= post.user.try(:name) %></a>
+          <a class="name-link" href="/user/<%=post.user.try(:id)%>"><%= post.user.try(:name) %></a>
         <p><%=post.created_at.strftime("%y/%m/%d")%></p>
 
        </div>
