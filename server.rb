@@ -6,7 +6,7 @@ require 'active_record'
 # set :database, 'sqlite3:rumblir.sqlite3'
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
-get'/home' do
+get '/' do
 
 
 @posts = Post.all
