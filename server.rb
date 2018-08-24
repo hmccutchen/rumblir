@@ -25,7 +25,7 @@ end
 
 post '/signup' do
 
-user = User.create( first_name: params[:first_name],
+user = User.create( first_name: params[:name],
                     last_name:  params[:last_name],
                     birthday:   params[:date],
                     email: params[:email],

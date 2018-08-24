@@ -32,8 +32,6 @@
 
           <a class="name-link" href="/user/<%=post.user.try(:id)%>"><%= post.user.try(:first_name) %></a>
 
-          <a class="name-link" href="/user/<%=post.user.try(:id)  %>"><%= post.user.try(:first_name) %></a>
-
         <p><%=post.created_at.strftime("%y/%m/%d")%></p>
 
        </div>
