@@ -25,7 +25,9 @@ end
 
 post '/signup' do
 
-user = User.create( name: params[:name],
+user = User.create( first_name: params[:first_name],
+                    last_name:  params[:last_name],
+                    birthday:   params[:date],
                     email: params[:email],
                     password: params[:password]
   )
@@ -60,7 +62,7 @@ if user.password == given_password
 redirect :account
 else
   p "invalid credentials"
-  redirect :home
+  redirect :/
 end
 end
 
@@ -117,7 +119,7 @@ get '/logout' do
 
 session[:user] = nil
 p "logged out"
-redirect :home
+redirect :/
 
 end
 
@@ -128,7 +130,7 @@ user = User.find(session[:user].id).destroy
 
 session[:user] = nil
 
-redirect :home
+redirect :/
 end
 
 

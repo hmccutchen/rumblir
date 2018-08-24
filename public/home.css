@@ -71,9 +71,9 @@ div.container.title{
 
   border-radius: 6px;
 
-  height: 431px;
+  height: 500px;
 
-  width: 50%;
+  width: 42%;
 
   filter: drop-shadow(1px 5px 9px);
 }
@@ -83,18 +83,18 @@ div.container.content:hover{
   width: 51vw;
 
 }
-a.post-title {
+.post-title {
   color: #0e1521;
-  font-size: 1.4em;
+  font-size: 1.5em;
 
 }
 
 
 
-a.post-title:hover{
+/*a.post-title:hover{
   text-decoration: none;
 
-}
+}*/
 
 .image-post{
   height: 50%;
@@ -118,6 +118,10 @@ input.signup-form{
   padding-bottom: 10px;
   margin-bottom: 5px;
   /* border-bottom-color:grey;*/
+}
+
+input.signup-form.date{
+  width:219px;
 }
 
 input.signup-form::placeholder{
@@ -146,5 +150,5 @@ input.signup-form::placeholder{
 }
 .name-link:hover{
   text-decoration: none;
-  color: #2e5696;
+  color: #cc1d2e;
 }
