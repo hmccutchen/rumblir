@@ -21,7 +21,7 @@
         <!-- <li><a href="/signup">Sign up</a></li> -->
         <li><a href="/login">Log in</a></li>
         <% else %>
-        <li><a href="/account"><%= session[:user].name.capitalize%></a></li>
+        <li><a href="/account"><%= session[:user].first_name.capitalize%></a></li>
         <li><a href="/logout">Log out</a></li>
         <% end %>
       </ul>

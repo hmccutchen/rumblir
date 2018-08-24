@@ -26,10 +26,14 @@
 
       <div class="container content">
         <a class="image-link" href="/post/<%=post.id%>"><img class="image-post" src="<%= post.image %>" alt=""></a>
-        <p id="title-text"><a class="post-title" href="/post/<%=post.id%>"><%= post.title %></a></p>
+        <p id="title-text" class="post-title"> <%= post.title %></p>
         <div class="container card">
         <p class="card-content"><%= post.content %></p>
-          <a class="name-link" href="/user/<%=post.user.try(:id)%>"><%= post.user.try(:name) %></a>
+
+          <a class="name-link" href="/user/<%=post.user.try(:id)%>"><%= post.user.try(:first_name) %></a>
+
+          <a class="name-link" href="/user/<%=post.user.try(:id)  %>"><%= post.user.try(:first_name) %></a>
+
         <p><%=post.created_at.strftime("%y/%m/%d")%></p>
 
        </div>
