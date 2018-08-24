@@ -3,8 +3,8 @@ require 'sinatra/activerecord'
 enable :sessions
 
 require 'active_record'
-# set :database, 'sqlite3:rumblir.sqlite3'
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+set :database, 'sqlite3:rumblir.sqlite3'
+# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
 get '/' do
 
@@ -25,7 +25,9 @@ end
 
 post '/signup' do
 
-user = User.create( name: params[:name],
+user = User.create( first_name: params[:first_name],
+                    last_name:  params[:last_name],
+                    birthday:   params[:date],
                     email: params[:email],
                     password: params[:password]
   )
